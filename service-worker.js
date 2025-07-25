@@ -6,8 +6,8 @@ self.addEventListener("install", function (event) {
         "styles.css",
         "script.js",
         "manifest.json",
-        "icon-scam-1.png",
-        "icon-scam-2.png"
+        "icon1.png",
+        "icon2.png"
       ]);
     })
   );
