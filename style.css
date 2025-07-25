@@ -1,0 +1,132 @@
+/* === BACKGROUND === */
+body {
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 4px;
+  background: linear-gradient(135deg, #0f001a, #001a33);
+  color: #f0f8ff;
+  min-height: 100vh;
+}
+
+/* === GAME CONTAINER === */
+.game {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 25px #00f0ff;
+}
+
+/* === HEADINGS === */
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00f0ff, 0 0 12px #00f0ff;
+}
+
+/* === TILE BUTTONS === */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+  gap: 12px;
+  margin: 20px 0;
+  justify-items: stretch;
+}
+
+.tile {
+  background: #140033;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Fills the grid cell */
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: 0.25s ease;
+}
+
+.tile:hover {
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #00f0ff;
+  transform: scale(1.05) rotate(-0.5deg);
+}
+
+.tile.correct {
+  background: #003319;
+  box-shadow: 0 0 12px #00ff88, 0 0 18px #00ffcc;
+}
+
+.tile.wrong {
+  background: #330000;
+  box-shadow: 0 0 12px #ff3333, 0 0 18px #ff6666;
+}
+
+/* === DROPDOWN & BUTTON === */
+select, button {
+  font-family: 'Orbitron', sans-serif;
+  background: #220044;
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  padding: 10px 16px;
+  margin: 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00f0ff;
+  font-size: 1em;
+  transition: 0.2s ease;
+  max-width: 100%;
+}
+
+select:focus, button:hover {
+  outline: none;
+  box-shadow: 0 0 14px #00ffff, 0 0 22px #ff00ff;
+  background: #330066;
+}
+
+/* === FEEDBACK TEXT === */
+.feedback {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #ff00ff;
+  text-shadow: 0 0 6px #ff00ff, 0 0 12px #ff33ff;
+  font-size: 1.1em;
+}
+
+/* === TIMER & SCORE === */
+p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* === TIME’S UP SCREEN === */
+#tile-container h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #ff00ff;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px #ff00ff, 0 0 16px #ff00ff;
+}
+
+#tile-container p {
+  color: #00ffff;
+  font-size: 1.2em;
+  text-shadow: 0 0 6px #00f0ff;
+}
+
+.end-screen {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.end-screen h3 {
+  font-size: 1.8em;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff;
+  margin-bottom: 10px;
+}
+
+.end-screen p {
+  font-size: 1.4em;
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff;
+}

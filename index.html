@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#00f0ff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scam Spotter Game</title>
+
+  <!-- 🌐 Google Fonts: Orbitron (titles), Rajdhani (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap" rel="stylesheet" />
+
+  <!-- 🎨 Link to your external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game">
+    <h1>🛡️ Scam Spotter</h1>
+
+    <p id="instructions"> Choose your scam type and press start. You have 60 seconds to <b> CLICK ALL THE SCAM TILES</b>. Good luck! 😌 </p>
+    
+    <!--<label for="scam-select"><strong>Choose scam type:</strong></label>-->
+    <select id="scam-select" onchange="changeScamType()">
+      <option value="investment">Investment Scam</option>
+      <option value="gois">Government Official Impersonation</option>
+      <option value="job">Job Scam</option>
+      <option value="ecommerce">E-commerce Scam</option>
+    </select>
+
+    <p>
+      <strong>Time:</strong> <span id="timer">60</span> sec |
+      <strong>Score:</strong> <span id="score">0</span>
+    </p>
+    
+    <div id="tile-container" class="tiles"></div>
+
+    <button id="start-button" onclick="startGame()">Start Game</button>
+
+    <p id="feedback" class="feedback"></p>
+  </div>
+
+  <!-- 🔧 Link to your game logic -->
+  <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
